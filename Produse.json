@@ -1,0 +1,21 @@
+[ {
+  "numeProdus" : "Telefon Samsung S9",
+  "pretProdus" : 2500.0,
+  "cantitateProdus" : 10
+}, {
+  "numeProdus" : "Laptop DELL",
+  "pretProdus" : 3500.0,
+  "cantitateProdus" : 5
+}, {
+  "numeProdus" : "Boxa Portabila JBL",
+  "pretProdus" : 400.0,
+  "cantitateProdus" : 30
+}, {
+  "numeProdus" : "Microfon JBL",
+  "pretProdus" : 600.0,
+  "cantitateProdus" : 15
+}, {
+  "numeProdus" : "Samsung Smart TV",
+  "pretProdus" : 3000.0,
+  "cantitateProdus" : 7
+} ]
