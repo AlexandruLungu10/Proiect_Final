@@ -1,8 +1,6 @@
 package com.proiectfinal;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,22 +15,22 @@ public class MagazinProduse {
 
         InventarProduse inventar = new InventarProduse();
         ObjectMapper mapper = JsonMethods.getDefaultMapper();
-        List<Produs> listaProduseInitiala = null;
+        List<Produs> listaProduseInitiala;
         try {
             listaProduseInitiala = Arrays.asList(mapper.readValue(new File("Produse.json"), Produs[].class));
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("A aparut o eroare la citirea fisierului 'Produse.json': " + e.getMessage(), e);
         }
         List<Produs> listaProduse = new ArrayList<>(listaProduseInitiala);
         boolean running = true;
         Scanner scanner = new Scanner(System.in);
         while(running){
-            System.out.println("Secrieti numarul optiunii dorite: " +
-                    "1. Afisati produsele existente " +
-                    "2. Adaugati un produs " +
-                    "3. Stergeti un produs " +
-                    "4. Modificati un produs " +
-                    "5. iesiti din meniu ");
+            System.out.println("Secrieti numarul optiunii dorite: \n" +
+                    "1. Afisati produsele existente \n" +
+                    "2. Adaugati un produs \n" +
+                    "3. Stergeti un produs \n" +
+                    "4. Modificati un produs \n" +
+                    "5. iesiti din meniu \n");
             int optiune = Integer.parseInt(scanner.nextLine());
             switch (optiune){
                 case 1:

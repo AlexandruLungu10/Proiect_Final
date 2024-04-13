@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.proiectfinal.toObject.TestFisier;
 import com.proiectfinal.toObject.TestToObject;
 import org.junit.jupiter.api.Test;
-
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -22,26 +21,26 @@ class JsonMethodsTest {
     @Test
     void parse() throws IOException {
         JsonNode node = JsonMethods.parse(simpleTest);
-        assertEquals(node.get("title").asText(), "Parse Test");
+        assertEquals(node.get("titlu").asText(), "Test");
     }
 
     @Test
     void fromJson() throws IOException {
         JsonNode node = JsonMethods.parse(simpleTest);
         TestToObject testToObject = JsonMethods.fromJson(node, TestToObject.class);
-        assertEquals(testToObject.getTitle(), "Parse Test");
+        assertEquals(testToObject.getTitlu(), "Test");
     }
     @Test
     void toJson() throws IOException {
         TestToObject test = new TestToObject();
-        test.setTitle("Titlu nou");
+        test.setTitlu("Titlu nou");
         JsonNode node = JsonMethods.toJson(test);
-        assertEquals(node.get("title").asText(), "Titlu nou");
+        assertEquals(node.get("titlu").asText(), "Titlu nou");
     }
     @Test
     void stringify() throws JsonProcessingException {
         TestToObject test = new TestToObject();
-        test.setTitle("Titlu stringify");
+        test.setTitlu("Titlu stringify");
         JsonNode node = JsonMethods.toJson(test);
         System.out.println(JsonMethods.stringify(node));
     }

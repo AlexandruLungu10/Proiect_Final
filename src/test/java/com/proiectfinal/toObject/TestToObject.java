@@ -1,14 +1,14 @@
 package com.proiectfinal.toObject;
 
 public class TestToObject {
-    private String title;
+    private String titlu;
 
-    public String getTitle() {
-        return title;
+    public String getTitlu() {
+        return titlu;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setTitlu(String titlu) {
+        this.titlu = titlu;
     }
 
 }
